@@ -21,13 +21,18 @@ exports.travelloan = (req, res) => {
     return renderPage(res, "travelloan", "Travelloan");
 };
 
-exports.products = (req, res) => {
-    return renderPage(res, "products", "Products — TMTrip");
+exports.forex = (req, res) => {
+    return renderPage(res, "forex", "Forex");
 };
 
-exports.productDetails = (req, res) => {
-    return renderPage(res, "product-details", "Product Details — TMTrip");
+exports.holidaypackages = (req, res) => {
+    return renderPage(res, "holidaypackages", "Holiday Pakages"); 
 };
+
+exports.comingsoon = (req, res) => {
+    return renderPage(res, "comingsoon", "Comingsoon"); 
+};
+
 
 exports.termCondition = (req, res) => {
     return renderPage(res, "tmtrip-term-condition", "TMTrip — Terms & Conditions");

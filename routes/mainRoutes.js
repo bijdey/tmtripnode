@@ -6,8 +6,9 @@ const {
     index,
     flights,
     travelloan,
-    products,
-    productDetails,
+    forex,
+    holidaypackages,
+    comingsoon,
     termCondition,
     privacyPolicy,
 } = require("../controllers/mainController");
@@ -17,8 +18,10 @@ router.get("/", index);
 router.get("/flights", flights);
 router.get("/travelloan", travelloan);
 
-router.get("/products", products);
-router.get("/product-details", productDetails);
+router.get("/forex", forex);
+router.get("/holidaypackages", holidaypackages);
+router.get("/comingsoon", comingsoon);
+
 
 router.get("/tmtrip-term-condition", termCondition);
 
