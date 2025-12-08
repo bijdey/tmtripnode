@@ -13,12 +13,12 @@ exports.index = (req, res) => {
     return renderPage(res, "index", "Home — TMTrip");
 };
 
-exports.about = (req, res) => {
-    return renderPage(res, "about-us", "About Us — TMTrip");
+exports.flights = (req, res) => {
+    return renderPage(res, "flights", "Book-Flights");
 };
 
-exports.contact = (req, res) => {
-    return renderPage(res, "contact-us", "Contact Us — TMTrip");
+exports.travelloan = (req, res) => {
+    return renderPage(res, "travelloan", "Travelloan");
 };
 
 exports.products = (req, res) => {
@@ -33,14 +33,10 @@ exports.termCondition = (req, res) => {
     return renderPage(res, "tmtrip-term-condition", "TMTrip — Terms & Conditions");
 };
 
-exports.shippingReturns = (req, res) => {
-    return renderPage(res, "tmtrip-shipping-returns-policy", "TMTrip — Shipping & Returns Policy");
-};
+
 
 exports.privacyPolicy = (req, res) => {
     return renderPage(res, "tmtrip-privacy-policy", "TMTrip — Privacy Policy");
 };
 
-exports.archiveSalePolicy = (req, res) => {
-    return renderPage(res, "tmtrip-archive-sale-policy", "TMTrip — Archive Sale Policy");
-};
+

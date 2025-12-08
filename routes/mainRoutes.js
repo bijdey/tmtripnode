@@ -4,28 +4,26 @@ const router = express.Router();
 
 const {
     index,
-    about,
-    contact,
+    flights,
+    travelloan,
     products,
     productDetails,
     termCondition,
-    shippingReturns,
     privacyPolicy,
-    archiveSalePolicy
 } = require("../controllers/mainController");
 
 // TMTrip Pages
 router.get("/", index);
-router.get("/about-us", about);
-router.get("/contact-us", contact);
+router.get("/flights", flights);
+router.get("/travelloan", travelloan);
 
 router.get("/products", products);
 router.get("/product-details", productDetails);
 
 router.get("/tmtrip-term-condition", termCondition);
-router.get("/tmtrip-shipping-returns-policy", shippingReturns);
+
 router.get("/tmtrip-privacy-policy", privacyPolicy);
-router.get("/tmtrip-archive-sale-policy", archiveSalePolicy);
+
 
 // 404
 router.use((req, res) => res.redirect("/error_404"));
