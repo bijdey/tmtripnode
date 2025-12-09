@@ -34,6 +34,11 @@ exports.comingsoon = (req, res) => {
 };
 
 
+exports.contactus = (req, res) => {
+    return renderPage(res, "contactus", "Contact US"); 
+};
+
+
 exports.termCondition = (req, res) => {
     return renderPage(res, "tmtrip-term-condition", "TMTrip — Terms & Conditions");
 };

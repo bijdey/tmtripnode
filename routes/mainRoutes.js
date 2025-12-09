@@ -9,6 +9,7 @@ const {
     forex,
     holidaypackages,
     comingsoon,
+    contactus, 
     termCondition,
     privacyPolicy,
 } = require("../controllers/mainController");
@@ -20,12 +21,18 @@ router.get("/travelloan", travelloan);
 
 router.get("/forex", forex);
 router.get("/holidaypackages", holidaypackages);
-router.get("/comingsoon", comingsoon);
+router.get("/contactus", contactus);
+
+
+
 
 
 router.get("/tmtrip-term-condition", termCondition);
 
 router.get("/tmtrip-privacy-policy", privacyPolicy);
+
+
+router.get("/comingsoon", comingsoon);
 
 
 
