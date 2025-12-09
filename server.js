@@ -19,6 +19,11 @@ app.use(express.static(path.join(__dirname, "public")));
 // Routes
 app.use('/', require('./routes/mainRoutes'));
 
+// 404 Page (Render directly without and route and controller to the 404page)
+app.use((req, res) => {
+    res.status(404).render("pages/404error");
+});
+
 // Start Server
 http.createServer(app).listen(port, () => {
     console.log(`Server running on port ${port}`);

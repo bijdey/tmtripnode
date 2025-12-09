@@ -28,7 +28,5 @@ router.get("/tmtrip-term-condition", termCondition);
 router.get("/tmtrip-privacy-policy", privacyPolicy);
 
 
-// 404
-router.use((req, res) => res.redirect("/error_404"));
 
 module.exports = router;
