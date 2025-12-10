@@ -1,10 +1,86 @@
-
 <%- include('../partials/header.ejs') %>
+<%- include('../partials/topservice.ejs') %>
 
-<div>
-       <!-- Contactus Soon Section -->
-    hello
+<div class="contactform-container">
+
+    <h2 class="contactform-title">Contact Us</h2>
+
+    <!-- Success Message -->
+    <% if (typeof success !== 'undefined' && success) { %>
+        <div class="contact-success"><%= success %></div>
+    <% } %>
+
+    <!-- Error Message -->
+    <% if (typeof errors !== 'undefined' && Object.keys(errors).length > 0) { %>
+        <div class="contact-error">Please fix the errors below.</div>
+    <% } %>
+
+    <form class="contactform" method="POST" action="/contactus" id="contactForm" novalidate>
+
+        <!-- Name -->
+        <div class="contactgroup">
+            <label class="contactlabel">Name <span class="required">*</span></label>
+            <input 
+                type="text" 
+                name="name" 
+                class="contactinput contactname <%= errors && errors.name ? 'contact-invalid' : '' %>"
+                placeholder="Your Name"
+                value="<%= old && old.name ? old.name : '' %>"
+                required
+            >
+            <% if (errors && errors.name) { %>
+                <p class="contact-invalid-msg"><%= errors.name.msg %></p>
+            <% } %>
+        </div>
+
+        <!-- Email -->
+        <div class="contactgroup">
+            <label class="contactlabel">Email <span class="required">*</span></label>
+            <input 
+                type="email" 
+                name="email" 
+                class="contactinput contactemail <%= errors && errors.email ? 'contact-invalid' : '' %>"
+                placeholder="your@email.com"
+                value="<%= old && old.email ? old.email : '' %>"
+                required
+            >
+            <% if (errors && errors.email) { %>
+                <p class="contact-invalid-msg"><%= errors.email.msg %></p>
+            <% } %>
+        </div>
+
+        <!-- Phone -->
+        <div class="contactgroup">
+            <label class="contactlabel">Phone Number <span class="required">*</span></label>
+            <input 
+                type="text" 
+                name="phone" 
+                class="contactinput contactphone <%= errors && errors.phone ? 'contact-invalid' : '' %>"
+                placeholder="9876543210"
+                value="<%= old && old.phone ? old.phone : '' %>"
+                required
+            >
+            <% if (errors && errors.phone) { %>
+                <p class="contact-invalid-msg"><%= errors.phone.msg %></p>
+            <% } %>
+        </div>
+
+        <!-- Message -->
+        <div class="contactgroup">
+            <label class="contactlabel">Message (optional)</label>
+            <textarea 
+                name="message" 
+                class="contacttextarea contactmessage <%= errors && errors.message ? 'contact-invalid' : '' %>"
+                placeholder="Write your message..."
+            ><%= old && old.message ? old.message : '' %></textarea>
+            <% if (errors && errors.message) { %>
+                <p class="contact-invalid-msg"><%= errors.message.msg %></p>
+            <% } %>
+        </div>
+
+        <button type="submit" class="contactbtn">Submit</button>
+
+    </form>
 </div>
-
 
 <%- include('../partials/footer.ejs') %>

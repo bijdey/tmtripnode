@@ -37,6 +37,15 @@ app.set("views", path.join(__dirname, "views"));
 // Static Files
 app.use(express.static(path.join(__dirname, "public")));
 
+// ensure templates always have these keys
+app.use((req, res, next) => {
+  res.locals.errors = {};
+  res.locals.old = {};
+  res.locals.success = null;
+  next();
+});
+
+
 // Routes
 app.use('/', require('./routes/mainRoutes'));
 

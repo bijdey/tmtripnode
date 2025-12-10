@@ -1130,3 +1130,102 @@
     }
 
 }
+
+/* ========== Responsive: Responsive: for contactus (768px - 1024px) ========== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contactform-container {
+    max-width: 720px;
+    padding: 60px 16px 24px;
+    margin: 16px auto;
+  }
+
+  .contactform-title { 
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .contactform {
+    gap: 16px;
+  }
+
+  .contactlabel {
+    font-size: 15px;
+  }
+
+  .contactinput,
+  .contacttextarea {
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .contacttextarea {
+    min-height: 110px;
+  }
+
+  .contactbtn {
+    font-size: 15px;
+    padding: 12px 14px;
+    align-self: flex-end;
+    min-width: 140px;
+  }
+}
+
+/* ========== Responsive: for contactus (<=767px) ========== */
+@media (max-width: 767px) {
+  .contactform-container {
+    width: 100%;
+    
+    margin: 0px auto;
+    padding: 28px 16px;
+    box-sizing: border-box;
+  }
+
+  .contactform-title {
+    font-size: 18px;
+    margin-bottom: 14px;
+    margin-top: 95px;
+  }
+
+  .contactform {
+    gap: 14px;
+  }
+
+  .contactgroup {
+    gap: 6px;
+  }
+
+  .contactlabel {
+    font-size: 14px;
+  }
+
+  .contactinput,
+  .contacttextarea {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .contacttextarea {
+    min-height: 100px;
+  }
+
+  .contact-invalid-msg {
+    font-size: 12px;
+  }
+
+  .contact-success,
+  .contact-error {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  /* Make submit button full-width for easier tapping */
+  .contactbtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    align-self: stretch;
+  }
+}

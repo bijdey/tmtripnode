@@ -2045,3 +2045,101 @@ span#select2-paymentSelect-container {
     object-fit: contain;
     padding: 10px;
 }
+
+/*contactus page*/
+
+
+.contactform-container {
+    max-width: 500px;
+    margin: 0px auto;
+    padding: 80px 0px 20px;
+    background: #ffffff;
+    position: relative;
+}
+
+.contactform-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contactform {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Groups */
+.contactgroup {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.contactlabel {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.required {
+    color: red;
+}
+
+/* Inputs */
+.contactinput,
+.contacttextarea {
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    background: #fafafa;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+}
+
+.contactinput:focus,
+.contacttextarea:focus {
+    border-color: #2563eb;
+}
+
+/* Error State */
+.contact-invalid {
+    border-color: red !important;
+    background: #ffe7e7;
+}
+
+.contact-invalid-msg {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Success & Error Boxes */
+.contact-success {
+    padding: 10px;
+    background: #d4ffd8;
+    color: #196c1f;
+    border-left: 4px solid #1aad21;
+    margin-bottom: 15px;
+}
+
+.contact-error {
+    padding: 10px;
+    background: #ffe1e1;
+    color: #b10000;
+    border-left: 4px solid #ff0000;
+    margin-bottom: 15px;
+}
+
+/* Button */
+.contactbtn {
+    padding: 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contactbtn:hover {
+    background: #1d4bc7;
+}
